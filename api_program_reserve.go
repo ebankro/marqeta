@@ -1,4 +1,3 @@
-
 /*
  * Marqeta Core API
  *
@@ -16,6 +15,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+
 	"github.com/antihax/optional"
 )
 
@@ -30,12 +30,12 @@ type ProgramReserveApiService service
 ProgramReserveApiService
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ProgramReserveApiDepositOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of ProgramReserveDepositRequest) - 
+     * @param "Body" (optional.Interface of ProgramReserveDepositRequest) -
 
 
 */
 
-type ProgramReserveApiDepositOpts struct { 
+type ProgramReserveApiDepositOpts struct {
 	Body optional.Interface
 }
 
@@ -45,7 +45,6 @@ func (a *ProgramReserveApiService) Deposit(ctx context.Context, localVarOptional
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		
 	)
 
 	// create path and map variables
@@ -74,10 +73,10 @@ func (a *ProgramReserveApiService) Deposit(ctx context.Context, localVarOptional
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(ProgramReserveDepositRequest)
 		if !localVarOptionalBodyok {
-				return nil, reportError("body should be ProgramReserveDepositRequest")
+			return nil, reportError("body should be ProgramReserveDepositRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -97,13 +96,12 @@ func (a *ProgramReserveApiService) Deposit(ctx context.Context, localVarOptional
 		return localVarHttpResponse, err
 	}
 
-
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		return localVarHttpResponse, newErr
 	}
 
@@ -121,10 +119,10 @@ ProgramReserveApiService
 
 */
 
-type ProgramReserveApiGetProgramReserveDepositsOpts struct { 
-	Count optional.Int32
+type ProgramReserveApiGetProgramReserveDepositsOpts struct {
+	Count      optional.Int32
 	StartIndex optional.Int32
-	SortBy optional.String
+	SortBy     optional.String
 }
 
 func (a *ProgramReserveApiService) GetProgramReserveDeposits(ctx context.Context, localVarOptionals *ProgramReserveApiGetProgramReserveDepositsOpts) (*http.Response, error) {
@@ -133,7 +131,6 @@ func (a *ProgramReserveApiService) GetProgramReserveDeposits(ctx context.Context
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		
 	)
 
 	// create path and map variables
@@ -185,13 +182,12 @@ func (a *ProgramReserveApiService) GetProgramReserveDeposits(ctx context.Context
 		return localVarHttpResponse, err
 	}
 
-
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		return localVarHttpResponse, newErr
 	}
 
@@ -207,10 +203,10 @@ ProgramReserveApiService Returns the latest balance in the program reserve accou
 */
 func (a *ProgramReserveApiService) GetProgramreserveBalances(ctx context.Context) (ProgramReserveAccountBalance, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ProgramReserveAccountBalance
 	)
 
@@ -256,27 +252,27 @@ func (a *ProgramReserveApiService) GetProgramreserveBalances(ctx context.Context
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ProgramReserveAccountBalance
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -296,19 +292,19 @@ ProgramReserveApiService Returns a list of program reserve transactions (credits
 @return ProgramReserveTransactionListResponse
 */
 
-type ProgramReserveApiGetProgramreserveTransactionsOpts struct { 
-	Count optional.Int32
+type ProgramReserveApiGetProgramreserveTransactionsOpts struct {
+	Count      optional.Int32
 	StartIndex optional.Int32
-	SortBy optional.String
-	Body optional.String
+	SortBy     optional.String
+	Body       optional.String
 }
 
 func (a *ProgramReserveApiService) GetProgramreserveTransactions(ctx context.Context, localVarOptionals *ProgramReserveApiGetProgramreserveTransactionsOpts) (ProgramReserveTransactionListResponse, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Get")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ProgramReserveTransactionListResponse
 	)
 
@@ -347,8 +343,8 @@ func (a *ProgramReserveApiService) GetProgramreserveTransactions(ctx context.Con
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		localVarPostBody = &localVarOptionals.Body.Value()
-		
+		body := localVarOptionals.Body.Value()
+		localVarPostBody = &body
 	}
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
@@ -368,27 +364,27 @@ func (a *ProgramReserveApiService) GetProgramreserveTransactions(ctx context.Con
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 200 {
 			var v ProgramReserveTransactionListResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -400,21 +396,21 @@ ProgramReserveApiService Credits or debits the program reserve account
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *ProgramReserveApiPostProgramreserveTransactionsOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of ProgramReserveTransactionRequest) - 
+     * @param "Body" (optional.Interface of ProgramReserveTransactionRequest) -
 
 @return ProgramReserveTransactionResponse
 */
 
-type ProgramReserveApiPostProgramreserveTransactionsOpts struct { 
+type ProgramReserveApiPostProgramreserveTransactionsOpts struct {
 	Body optional.Interface
 }
 
 func (a *ProgramReserveApiService) PostProgramreserveTransactions(ctx context.Context, localVarOptionals *ProgramReserveApiPostProgramreserveTransactionsOpts) (ProgramReserveTransactionResponse, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ProgramReserveTransactionResponse
 	)
 
@@ -444,10 +440,10 @@ func (a *ProgramReserveApiService) PostProgramreserveTransactions(ctx context.Co
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(ProgramReserveTransactionRequest)
 		if !localVarOptionalBodyok {
-				return localVarReturnValue, nil, reportError("body should be ProgramReserveTransactionRequest")
+			return localVarReturnValue, nil, reportError("body should be ProgramReserveTransactionRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -469,30 +465,29 @@ func (a *ProgramReserveApiService) PostProgramreserveTransactions(ctx context.Co
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 201 {
 			var v ProgramReserveTransactionResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
-

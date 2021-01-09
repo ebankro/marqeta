@@ -1,4 +1,3 @@
-
 /*
  * Marqeta Core API
  *
@@ -16,6 +15,8 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -30,21 +31,21 @@ DigitalWalletProvisionRequestsApiService Validates and creates Android-specific 
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsAndroidpayOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of DigitalWalletAndroidPayProvisionRequest) - 
+     * @param "Body" (optional.Interface of DigitalWalletAndroidPayProvisionRequest) -
 
 @return DigitalWalletAndroidPayProvisionResponse
 */
 
-type DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsAndroidpayOpts struct { 
+type DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsAndroidpayOpts struct {
 	Body optional.Interface
 }
 
 func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionrequestsAndroidpay(ctx context.Context, localVarOptionals *DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsAndroidpayOpts) (DigitalWalletAndroidPayProvisionResponse, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue DigitalWalletAndroidPayProvisionResponse
 	)
 
@@ -74,10 +75,10 @@ func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionreq
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(DigitalWalletAndroidPayProvisionRequest)
 		if !localVarOptionalBodyok {
-				return localVarReturnValue, nil, reportError("body should be DigitalWalletAndroidPayProvisionRequest")
+			return localVarReturnValue, nil, reportError("body should be DigitalWalletAndroidPayProvisionRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -99,27 +100,27 @@ func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionreq
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 201 {
 			var v DigitalWalletAndroidPayProvisionResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -131,21 +132,21 @@ DigitalWalletProvisionRequestsApiService Validates Apple certificates and create
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsApplepayOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of DigitalWalletApplePayProvisionRequest) - 
+     * @param "Body" (optional.Interface of DigitalWalletApplePayProvisionRequest) -
 
 @return DigitalWalletApplePayProvisionResponse
 */
 
-type DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsApplepayOpts struct { 
+type DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsApplepayOpts struct {
 	Body optional.Interface
 }
 
 func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionrequestsApplepay(ctx context.Context, localVarOptionals *DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsApplepayOpts) (DigitalWalletApplePayProvisionResponse, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue DigitalWalletApplePayProvisionResponse
 	)
 
@@ -175,10 +176,10 @@ func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionreq
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(DigitalWalletApplePayProvisionRequest)
 		if !localVarOptionalBodyok {
-				return localVarReturnValue, nil, reportError("body should be DigitalWalletApplePayProvisionRequest")
+			return localVarReturnValue, nil, reportError("body should be DigitalWalletApplePayProvisionRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -200,27 +201,27 @@ func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionreq
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 201 {
 			var v DigitalWalletApplePayProvisionResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -232,21 +233,21 @@ DigitalWalletProvisionRequestsApiService Validates and creates Samsung-specific 
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsSamsungpayOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of DigitalWalletAndroidPayProvisionRequest) - 
+     * @param "Body" (optional.Interface of DigitalWalletAndroidPayProvisionRequest) -
 
 @return DigitalWalletSamsungPayProvisionResponse
 */
 
-type DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsSamsungpayOpts struct { 
+type DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsSamsungpayOpts struct {
 	Body optional.Interface
 }
 
 func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionrequestsSamsungpay(ctx context.Context, localVarOptionals *DigitalWalletProvisionRequestsApiPostDigitalwalletprovisionrequestsSamsungpayOpts) (DigitalWalletSamsungPayProvisionResponse, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue DigitalWalletSamsungPayProvisionResponse
 	)
 
@@ -276,10 +277,10 @@ func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionreq
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(DigitalWalletAndroidPayProvisionRequest)
 		if !localVarOptionalBodyok {
-				return localVarReturnValue, nil, reportError("body should be DigitalWalletAndroidPayProvisionRequest")
+			return localVarReturnValue, nil, reportError("body should be DigitalWalletAndroidPayProvisionRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -301,30 +302,29 @@ func (a *DigitalWalletProvisionRequestsApiService) PostDigitalwalletprovisionreq
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 201 {
 			var v DigitalWalletSamsungPayProvisionResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
 	return localVarReturnValue, localVarHttpResponse, nil
 }
-

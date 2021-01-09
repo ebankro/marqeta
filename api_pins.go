@@ -1,4 +1,3 @@
-
 /*
  * Marqeta Core API
  *
@@ -16,6 +15,8 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+
+	"github.com/antihax/optional"
 )
 
 // Linger please
@@ -30,21 +31,21 @@ PinsApiService Creates a new control token for a PIN
 Creates a new control token for a PIN, for the specified card for PIN debit or ATM transactions,or to allow for a pin to be revealed to authorized callers.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *PinsApiPostPinsControltokenOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of ControlTokenRequest) - 
+     * @param "Body" (optional.Interface of ControlTokenRequest) -
 
 @return ControlTokenResponse
 */
 
-type PinsApiPostPinsControltokenOpts struct { 
+type PinsApiPostPinsControltokenOpts struct {
 	Body optional.Interface
 }
 
 func (a *PinsApiService) PostPinsControltoken(ctx context.Context, localVarOptionals *PinsApiPostPinsControltokenOpts) (ControlTokenResponse, *http.Response, error) {
 	var (
-		localVarHttpMethod = strings.ToUpper("Post")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
+		localVarHttpMethod  = strings.ToUpper("Post")
+		localVarPostBody    interface{}
+		localVarFileName    string
+		localVarFileBytes   []byte
 		localVarReturnValue ControlTokenResponse
 	)
 
@@ -74,10 +75,10 @@ func (a *PinsApiService) PostPinsControltoken(ctx context.Context, localVarOptio
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(ControlTokenRequest)
 		if !localVarOptionalBodyok {
-				return localVarReturnValue, nil, reportError("body should be ControlTokenRequest")
+			return localVarReturnValue, nil, reportError("body should be ControlTokenRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -99,27 +100,27 @@ func (a *PinsApiService) PostPinsControltoken(ctx context.Context, localVarOptio
 
 	if localVarHttpResponse.StatusCode < 300 {
 		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
 		return localVarReturnValue, localVarHttpResponse, err
 	}
 
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		if localVarHttpResponse.StatusCode == 201 {
 			var v ControlTokenResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
 				return localVarReturnValue, localVarHttpResponse, newErr
+			}
+			newErr.model = v
+			return localVarReturnValue, localVarHttpResponse, newErr
 		}
-		
+
 		return localVarReturnValue, localVarHttpResponse, newErr
 	}
 
@@ -131,12 +132,12 @@ PinsApiService Updates the PIN control token
 Updates a PIN identified by its control token.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *PinsApiPutPinsOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of PinRequest) - 
+     * @param "Body" (optional.Interface of PinRequest) -
 
 
 */
 
-type PinsApiPutPinsOpts struct { 
+type PinsApiPutPinsOpts struct {
 	Body optional.Interface
 }
 
@@ -146,7 +147,6 @@ func (a *PinsApiService) PutPins(ctx context.Context, localVarOptionals *PinsApi
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		
 	)
 
 	// create path and map variables
@@ -175,10 +175,10 @@ func (a *PinsApiService) PutPins(ctx context.Context, localVarOptionals *PinsApi
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(PinRequest)
 		if !localVarOptionalBodyok {
-				return nil, reportError("body should be PinRequest")
+			return nil, reportError("body should be PinRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -198,13 +198,12 @@ func (a *PinsApiService) PutPins(ctx context.Context, localVarOptionals *PinsApi
 		return localVarHttpResponse, err
 	}
 
-
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		return localVarHttpResponse, newErr
 	}
 
@@ -216,12 +215,12 @@ PinsApiService Updates the PIN-reveal control token
 Reveals pin for card associated with given control token.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *PinsApiRevealPinsOpts - Optional Parameters:
-     * @param "Body" (optional.Interface of PinRevealRequest) - 
+     * @param "Body" (optional.Interface of PinRevealRequest) -
 
 
 */
 
-type PinsApiRevealPinsOpts struct { 
+type PinsApiRevealPinsOpts struct {
 	Body optional.Interface
 }
 
@@ -231,7 +230,6 @@ func (a *PinsApiService) RevealPins(ctx context.Context, localVarOptionals *Pins
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		
 	)
 
 	// create path and map variables
@@ -260,10 +258,10 @@ func (a *PinsApiService) RevealPins(ctx context.Context, localVarOptionals *Pins
 	}
 	// body params
 	if localVarOptionals != nil && localVarOptionals.Body.IsSet() {
-		
+
 		localVarOptionalBody, localVarOptionalBodyok := localVarOptionals.Body.Value().(PinRevealRequest)
 		if !localVarOptionalBodyok {
-				return nil, reportError("body should be PinRevealRequest")
+			return nil, reportError("body should be PinRevealRequest")
 		}
 		localVarPostBody = &localVarOptionalBody
 	}
@@ -283,16 +281,14 @@ func (a *PinsApiService) RevealPins(ctx context.Context, localVarOptionals *Pins
 		return localVarHttpResponse, err
 	}
 
-
 	if localVarHttpResponse.StatusCode >= 300 {
 		newErr := GenericSwaggerError{
-			body: localVarBody,
+			body:  localVarBody,
 			error: localVarHttpResponse.Status,
 		}
-		
+
 		return localVarHttpResponse, newErr
 	}
 
 	return localVarHttpResponse, nil
 }
-
