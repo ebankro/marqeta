@@ -1,4 +1,4 @@
-module github.com/ebankro/marqeta-client
+module github.com/ebankro/marqeta
 
 go 1.15
 
