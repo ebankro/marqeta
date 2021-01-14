@@ -25,6 +25,10 @@ var (
 	_ context.Context
 )
 
+type UsersApiServiceInferface interface {
+	GetUsers(ctx context.Context, localVarOptionals *UsersApiGetUsersOpts) (UserCardHolderListResponse, *http.Response, error)
+}
+
 type UsersApiService service
 
 /*
