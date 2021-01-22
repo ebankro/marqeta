@@ -19,6 +19,6 @@ type CommandoModeTransitionResponse struct {
 	CommandoModeToken string                        `json:"commando_mode_token,omitempty"`
 	Transition        *CommandoModeNestedTransition `json:"transition,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
-	Name        string    `json:"name,omitempty"`
+	CreatedTime *time.Time `json:"created_time"`
+	Name        string     `json:"name,omitempty"`
 }

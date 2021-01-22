@@ -16,8 +16,8 @@ import (
 type Authentication struct {
 	LastPasswordUpdateChannel string `json:"last_password_update_channel,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastPasswordUpdateTime time.Time `json:"last_password_update_time,omitempty"`
-	EmailVerified          bool      `json:"email_verified,omitempty"`
+	LastPasswordUpdateTime *time.Time `json:"last_password_update_time,omitempty"`
+	EmailVerified          bool       `json:"email_verified,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	EmailVerifiedTime time.Time `json:"email_verified_time,omitempty"`
+	EmailVerifiedTime *time.Time `json:"email_verified_time,omitempty"`
 }

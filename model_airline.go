@@ -14,7 +14,7 @@ import (
 )
 
 type Airline struct {
-	PassengerName   string    `json:"passenger_name,omitempty"`
-	DepartDate      time.Time `json:"depart_date,omitempty"`
-	OriginationCity string    `json:"origination_city,omitempty"`
+	PassengerName   string     `json:"passenger_name,omitempty"`
+	DepartDate      *time.Time `json:"depart_date,omitempty"`
+	OriginationCity string     `json:"origination_city,omitempty"`
 }

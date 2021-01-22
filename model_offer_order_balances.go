@@ -22,5 +22,5 @@ type OfferOrderBalances struct {
 	PendingCredits   float32                       `json:"pending_credits"`
 	ImpactedAmount   float32                       `json:"impacted_amount,omitempty"`
 	Balances         map[string]OfferOrderBalances `json:"balances"`
-	LastUpdatedTime  time.Time                     `json:"last_updated_time"`
+	LastUpdatedTime  *time.Time                    `json:"last_updated_time"`
 }

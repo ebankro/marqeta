@@ -18,10 +18,10 @@ type ChargebackFundingSourceModel struct {
 	Active           bool   `json:"active"`
 	IsDefaultAccount bool   `json:"is_default_account"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
-	Type_            string    `json:"type"`
-	Name             string    `json:"name"`
-	Credit           bool      `json:"credit"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
+	Type_            string     `json:"type"`
+	Name             string     `json:"name"`
+	Credit           bool       `json:"credit"`
 }

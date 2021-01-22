@@ -18,9 +18,9 @@ type AuthControlExemptMidsResponse struct {
 	Name        string                   `json:"name"`
 	Association *SpendControlAssociation `json:"association,omitempty"`
 	Mid         string                   `json:"mid"`
-	StartTime   time.Time                `json:"start_time,omitempty"`
-	EndTime     time.Time                `json:"end_time,omitempty"`
+	StartTime   *time.Time               `json:"start_time,omitempty"`
+	EndTime     *time.Time               `json:"end_time,omitempty"`
 	Active      bool                     `json:"active,omitempty"`
-	Created     time.Time                `json:"created,omitempty"`
-	LastUpdated time.Time                `json:"last_updated,omitempty"`
+	Created     *time.Time               `json:"created,omitempty"`
+	LastUpdated *time.Time               `json:"last_updated,omitempty"`
 }

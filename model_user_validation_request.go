@@ -15,7 +15,7 @@ import (
 
 type UserValidationRequest struct {
 	// yyyy-MM-dd
-	BirthDate time.Time `json:"birth_date,omitempty"`
+	BirthDate *time.Time `json:"birth_date,omitempty"`
 	// Phone #
 	Phone string `json:"phone,omitempty"`
 	// Last four digits of SSN

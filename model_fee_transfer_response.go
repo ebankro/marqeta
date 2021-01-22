@@ -23,5 +23,5 @@ type FeeTransferResponse struct {
 	// Required if 'user_token' is null
 	BusinessToken string `json:"business_token"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 }

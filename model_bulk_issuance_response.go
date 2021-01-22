@@ -24,11 +24,11 @@ type BulkIssuanceResponse struct {
 	NameLine1RandomPostfix  bool                 `json:"name_line_1_random_postfix,omitempty"`
 	ExpirationOffset        *ExpirationOffset    `json:"expiration_offset,omitempty"`
 	CardsProcessed          int32                `json:"cards_processed,omitempty"`
-	CreatedTime             time.Time            `json:"created_time,omitempty"`
+	CreatedTime             *time.Time           `json:"created_time,omitempty"`
 	NameLine1StartIndex     int32                `json:"name_line1_start_index,omitempty"`
 	NameLine1EndIndex       int32                `json:"name_line1_end_index,omitempty"`
-	CardFulfillmentTime     time.Time            `json:"card_fulfillment_time,omitempty"`
-	ProviderShipDate        time.Time            `json:"provider_ship_date,omitempty"`
+	CardFulfillmentTime     *time.Time           `json:"card_fulfillment_time,omitempty"`
+	ProviderShipDate        *time.Time           `json:"provider_ship_date,omitempty"`
 	ProviderShippingMethod  string               `json:"provider_shipping_method,omitempty"`
 	ProviderTrackingNumber  string               `json:"provider_tracking_number,omitempty"`
 }

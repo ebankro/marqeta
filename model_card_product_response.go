@@ -17,11 +17,11 @@ type CardProductResponse struct {
 	Token     string             `json:"token,omitempty"`
 	Name      string             `json:"name"`
 	Active    bool               `json:"active,omitempty"`
-	StartDate time.Time          `json:"start_date"`
-	EndDate   time.Time          `json:"end_date,omitempty"`
+	StartDate *time.Time         `json:"start_date"`
+	EndDate   *time.Time         `json:"end_date,omitempty"`
 	Config    *CardProductConfig `json:"config,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
 }

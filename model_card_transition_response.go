@@ -24,7 +24,7 @@ type CardTransitionResponse struct {
 	FulfillmentStatus       string               `json:"fulfillment_status"`
 	Validations             *ValidationsResponse `json:"validations,omitempty"`
 	Type_                   string               `json:"type"`
-	CreatedTime             time.Time            `json:"created_time,omitempty"`
+	CreatedTime             *time.Time           `json:"created_time,omitempty"`
 	CardProductToken        string               `json:"card_product_token"`
 	LastFour                string               `json:"last_four"`
 	Pan                     string               `json:"pan"`

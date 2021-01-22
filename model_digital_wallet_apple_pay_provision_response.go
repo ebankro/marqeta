@@ -15,11 +15,11 @@ import (
 
 type DigitalWalletApplePayProvisionResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime   time.Time `json:"last_modified_time"`
-	CardToken          string    `json:"card_token"`
-	EncryptedPassData  string    `json:"encrypted_pass_data"`
-	ActivationData     string    `json:"activation_data"`
-	EphemeralPublicKey string    `json:"ephemeral_public_key"`
+	LastModifiedTime   *time.Time `json:"last_modified_time"`
+	CardToken          string     `json:"card_token"`
+	EncryptedPassData  string     `json:"encrypted_pass_data"`
+	ActivationData     string     `json:"activation_data"`
+	EphemeralPublicKey string     `json:"ephemeral_public_key"`
 }

@@ -25,9 +25,9 @@ type MsaOrderRequest struct {
 	// default is 0.00
 	RewardAmount float32 `json:"reward_amount,omitempty"`
 	// default is 0.01
-	RewardTriggerAmount       float32   `json:"reward_trigger_amount,omitempty"`
-	StartDate                 time.Time `json:"start_date,omitempty"`
-	EndDate                   time.Time `json:"end_date,omitempty"`
-	FundingSourceToken        string    `json:"funding_source_token"`
-	FundingSourceAddressToken string    `json:"funding_source_address_token,omitempty"`
+	RewardTriggerAmount       float32    `json:"reward_trigger_amount,omitempty"`
+	StartDate                 *time.Time `json:"start_date,omitempty"`
+	EndDate                   *time.Time `json:"end_date,omitempty"`
+	FundingSourceToken        string     `json:"funding_source_token"`
+	FundingSourceAddressToken string     `json:"funding_source_address_token,omitempty"`
 }

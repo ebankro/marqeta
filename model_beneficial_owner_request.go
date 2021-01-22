@@ -20,6 +20,6 @@ type BeneficialOwnerRequest struct {
 	Title      string               `json:"title,omitempty"`
 	Home       *AddressRequestModel `json:"home,omitempty"`
 	Ssn        string               `json:"ssn,omitempty"`
-	Dob        time.Time            `json:"dob,omitempty"`
+	Dob        *time.Time           `json:"dob,omitempty"`
 	Phone      string               `json:"phone,omitempty"`
 }

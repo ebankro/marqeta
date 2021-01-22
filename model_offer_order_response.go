@@ -15,9 +15,9 @@ import (
 
 type OfferOrderResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime        time.Time                     `json:"last_modified_time"`
+	LastModifiedTime        *time.Time                    `json:"last_modified_time"`
 	UserToken               string                        `json:"user_token,omitempty"`
 	BusinessToken           string                        `json:"business_token,omitempty"`
 	Token                   string                        `json:"token"`
@@ -26,5 +26,5 @@ type OfferOrderResponse struct {
 	Funding                 *Funding                      `json:"funding,omitempty"`
 	Offer                   *OfferModel                   `json:"offer,omitempty"`
 	// yyyy-MM-ddThh:mm:ssZ
-	LastTransactionDate time.Time `json:"last_transaction_date"`
+	LastTransactionDate *time.Time `json:"last_transaction_date"`
 }

@@ -15,9 +15,9 @@ import (
 
 type CardResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
 	// 36 char max
 	Token string `json:"token"`
 	// 36 char max
@@ -28,7 +28,7 @@ type CardResponse struct {
 	Pan              string `json:"pan"`
 	Expiration       string `json:"expiration"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	ExpirationTime                  time.Time                `json:"expiration_time"`
+	ExpirationTime                  *time.Time               `json:"expiration_time"`
 	CvvNumber                       string                   `json:"cvv_number,omitempty"`
 	ChipCvvNumber                   string                   `json:"chip_cvv_number,omitempty"`
 	Barcode                         string                   `json:"barcode"`

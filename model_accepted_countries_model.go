@@ -14,10 +14,10 @@ import (
 )
 
 type AcceptedCountriesModel struct {
-	Token            string    `json:"token,omitempty"`
-	Name             string    `json:"name"`
-	IsWhitelist      bool      `json:"is_whitelist"`
-	CountryCodes     []string  `json:"country_codes"`
-	CreatedTime      time.Time `json:"created_time,omitempty"`
-	LastModifiedTime time.Time `json:"last_modified_time,omitempty"`
+	Token            string     `json:"token,omitempty"`
+	Name             string     `json:"name"`
+	IsWhitelist      bool       `json:"is_whitelist"`
+	CountryCodes     []string   `json:"country_codes"`
+	CreatedTime      *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time,omitempty"`
 }

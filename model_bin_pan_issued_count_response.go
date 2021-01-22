@@ -15,10 +15,10 @@ import (
 
 type BinPanIssuedCountResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
-	BinHash          string    `json:"bin_hash"`
-	Count            int64     `json:"count"`
-	MaxCards         int64     `json:"max_cards,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
+	BinHash          string     `json:"bin_hash"`
+	Count            int64      `json:"count"`
+	MaxCards         int64      `json:"max_cards,omitempty"`
 }

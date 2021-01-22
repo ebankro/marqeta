@@ -21,34 +21,34 @@ type AdvAuthRequestModel struct {
 	SubNetwork         string `json:"sub_network,omitempty"`
 	NetworkReferenceId string `json:"network_reference_id,omitempty"`
 	// yyyy-MM-dd, yyyy-MM-ddThh:mm:ssZ
-	LocalTransactionDate time.Time `json:"local_transaction_date,omitempty"`
+	LocalTransactionDate *time.Time `json:"local_transaction_date,omitempty"`
 	// yyyy-MM-dd, yyyy-MM-ddThh:mm:ssZ
-	TransactionDate time.Time `json:"transaction_date,omitempty"`
+	TransactionDate *time.Time `json:"transaction_date,omitempty"`
 	// yyyy-MM-dd, yyyy-MM-ddThh:mm:ssZ
-	SettlementDate                  time.Time `json:"settlement_date,omitempty"`
-	Stan                            string    `json:"stan,omitempty"`
-	Rrn                             string    `json:"rrn,omitempty"`
-	ProcessingCode                  string    `json:"processing_code,omitempty"`
-	FunctionCode                    string    `json:"function_code,omitempty"`
-	ReasonCode                      string    `json:"reason_code,omitempty"`
-	AcquirerReferenceId             string    `json:"acquirer_reference_id,omitempty"`
-	ForwardingInstitutionId         string    `json:"forwarding_institution_id,omitempty"`
-	LocalTransactionAmount          float32   `json:"local_transaction_amount,omitempty"`
-	LocalCurrencyCode               string    `json:"local_currency_code,omitempty"`
-	SettlementAmount                float32   `json:"settlement_amount,omitempty"`
-	CardholderBillingAmount         float32   `json:"cardholder_billing_amount,omitempty"`
-	CardholderBillingConversionRate float64   `json:"cardholder_billing_conversion_rate,omitempty"`
-	CardholderBillingCurrency       string    `json:"cardholder_billing_currency,omitempty"`
-	SettlementCurrencyCode          string    `json:"settlement_currency_code,omitempty"`
-	ApprovalCode                    string    `json:"approval_code,omitempty"`
-	NetworkResponse                 string    `json:"network_response,omitempty"`
-	StanPaddingLength               int32     `json:"stan_padding_length,omitempty"`
-	Acquirer                        *Acquirer `json:"acquirer,omitempty"`
-	CardToken                       string    `json:"card_token"`
-	Amount                          float32   `json:"amount,omitempty"`
-	CashBackAmount                  float32   `json:"cash_back_amount,omitempty"`
-	Mid                             string    `json:"mid,omitempty"`
-	Pin                             string    `json:"pin,omitempty"`
+	SettlementDate                  *time.Time `json:"settlement_date,omitempty"`
+	Stan                            string     `json:"stan,omitempty"`
+	Rrn                             string     `json:"rrn,omitempty"`
+	ProcessingCode                  string     `json:"processing_code,omitempty"`
+	FunctionCode                    string     `json:"function_code,omitempty"`
+	ReasonCode                      string     `json:"reason_code,omitempty"`
+	AcquirerReferenceId             string     `json:"acquirer_reference_id,omitempty"`
+	ForwardingInstitutionId         string     `json:"forwarding_institution_id,omitempty"`
+	LocalTransactionAmount          float32    `json:"local_transaction_amount,omitempty"`
+	LocalCurrencyCode               string     `json:"local_currency_code,omitempty"`
+	SettlementAmount                float32    `json:"settlement_amount,omitempty"`
+	CardholderBillingAmount         float32    `json:"cardholder_billing_amount,omitempty"`
+	CardholderBillingConversionRate float64    `json:"cardholder_billing_conversion_rate,omitempty"`
+	CardholderBillingCurrency       string     `json:"cardholder_billing_currency,omitempty"`
+	SettlementCurrencyCode          string     `json:"settlement_currency_code,omitempty"`
+	ApprovalCode                    string     `json:"approval_code,omitempty"`
+	NetworkResponse                 string     `json:"network_response,omitempty"`
+	StanPaddingLength               int32      `json:"stan_padding_length,omitempty"`
+	Acquirer                        *Acquirer  `json:"acquirer,omitempty"`
+	CardToken                       string     `json:"card_token"`
+	Amount                          float32    `json:"amount,omitempty"`
+	CashBackAmount                  float32    `json:"cash_back_amount,omitempty"`
+	Mid                             string     `json:"mid,omitempty"`
+	Pin                             string     `json:"pin,omitempty"`
 	// Default is MAG_STRIPE
 	PosPanEntryMode   string  `json:"pos_pan_entry_mode,omitempty"`
 	AcquirerFeeAmount float32 `json:"acquirer_fee_amount,omitempty"`
