@@ -17,7 +17,7 @@ type CardProductRequest struct {
 	Token     string             `json:"token,omitempty"`
 	Name      string             `json:"name"`
 	Active    bool               `json:"active,omitempty"`
-	StartDate time.Time          `json:"start_date"`
-	EndDate   time.Time          `json:"end_date,omitempty"`
+	StartDate *time.Time         `json:"start_date"`
+	EndDate   *time.Time         `json:"end_date,omitempty"`
 	Config    *CardProductConfig `json:"config,omitempty"`
 }

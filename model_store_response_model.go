@@ -39,7 +39,7 @@ type StoreResponseModel struct {
 	PartialApprovalCapable bool   `json:"partial_approval_capable,omitempty"`
 	KeyedAuthCvvEnforced   bool   `json:"keyed_auth_cvv_enforced,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
 }

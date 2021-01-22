@@ -22,9 +22,9 @@ type ChargebackTransitionResponse struct {
 	Reason           string `json:"reason,omitempty"`
 	TransactionToken string `json:"transaction_token,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
-	Type_            string    `json:"type"`
-	Amount           float32   `json:"amount,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
+	Type_            string     `json:"type"`
+	Amount           float32    `json:"amount,omitempty"`
 }

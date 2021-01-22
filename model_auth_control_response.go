@@ -18,7 +18,7 @@ type AuthControlResponse struct {
 	Name          string                   `json:"name"`
 	Association   *SpendControlAssociation `json:"association,omitempty"`
 	MerchantScope *MerchantScope           `json:"merchant_scope,omitempty"`
-	StartTime     time.Time                `json:"start_time,omitempty"`
-	EndTime       time.Time                `json:"end_time,omitempty"`
+	StartTime     *time.Time               `json:"start_time,omitempty"`
+	EndTime       *time.Time               `json:"end_time,omitempty"`
 	Active        bool                     `json:"active,omitempty"`
 }

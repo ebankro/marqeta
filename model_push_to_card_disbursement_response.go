@@ -15,14 +15,14 @@ import (
 
 type PushToCardDisbursementResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime       time.Time `json:"last_modified_time"`
-	Status                 string    `json:"status,omitempty"`
-	Token                  string    `json:"token,omitempty"`
-	CurrencyCode           string    `json:"currency_code,omitempty"`
-	Amount                 float32   `json:"amount,omitempty"`
-	PaymentInstrumentToken string    `json:"payment_instrument_token,omitempty"`
-	Tags                   string    `json:"tags,omitempty"`
-	Memo                   string    `json:"memo,omitempty"`
+	LastModifiedTime       *time.Time `json:"last_modified_time"`
+	Status                 string     `json:"status,omitempty"`
+	Token                  string     `json:"token,omitempty"`
+	CurrencyCode           string     `json:"currency_code,omitempty"`
+	Amount                 float32    `json:"amount,omitempty"`
+	PaymentInstrumentToken string     `json:"payment_instrument_token,omitempty"`
+	Tags                   string     `json:"tags,omitempty"`
+	Memo                   string     `json:"memo,omitempty"`
 }

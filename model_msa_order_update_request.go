@@ -16,7 +16,7 @@ import (
 type MsaOrderUpdateRequest struct {
 	Active bool `json:"active,omitempty"`
 	// yyyy-MM-ddThh:mm:ssZ
-	StartDate time.Time `json:"start_date,omitempty"`
+	StartDate *time.Time `json:"start_date,omitempty"`
 	// yyyy-MM-ddThh:mm:ssZ
-	EndDate time.Time `json:"end_date,omitempty"`
+	EndDate *time.Time `json:"end_date,omitempty"`
 }

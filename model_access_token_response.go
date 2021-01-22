@@ -16,7 +16,7 @@ import (
 type AccessTokenResponse struct {
 	Token string `json:"token,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	Expires     time.Time    `json:"expires"`
+	Expires     *time.Time   `json:"expires"`
 	Application *Application `json:"application,omitempty"`
 	UserToken   string       `json:"user_token,omitempty"`
 	MasterRoles []string     `json:"master_roles,omitempty"`

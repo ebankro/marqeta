@@ -37,11 +37,11 @@ type Gatewaylog struct {
 	OriginalGateway      *Gatewaylog      `json:"original_gateway,omitempty"`
 	Amount               float32          `json:"amount,omitempty"`
 	Duplicate            string           `json:"duplicate,omitempty"`
-	PostDate             time.Time        `json:"post_date,omitempty"`
-	ResponseTime         time.Time        `json:"response_time,omitempty"`
+	PostDate             *time.Time       `json:"post_date,omitempty"`
+	ResponseTime         *time.Time       `json:"response_time,omitempty"`
 	ApiDuration          int64            `json:"api_duration,omitempty"`
 	GatewayDuration      int64            `json:"gateway_duration,omitempty"`
 	AchStatus            string           `json:"ach_status,omitempty"`
-	Created              time.Time        `json:"created,omitempty"`
-	Modified             time.Time        `json:"modified,omitempty"`
+	Created              *time.Time       `json:"created,omitempty"`
+	Modified             *time.Time       `json:"modified,omitempty"`
 }

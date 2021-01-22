@@ -32,7 +32,7 @@ type CardholderAddressResponse struct {
 	IsDefaultAddress bool   `json:"is_default_address,omitempty"`
 	Active           bool   `json:"active,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
 }

@@ -20,8 +20,8 @@ type InternalFundingSource struct {
 	Type_            string           `json:"type,omitempty"`
 	Id               string           `json:"id,omitempty"`
 	Token            string           `json:"token"`
-	CreatedTime      time.Time        `json:"created_time,omitempty"`
-	LastModifiedTime time.Time        `json:"last_modified_time,omitempty"`
+	CreatedTime      *time.Time       `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time       `json:"last_modified_time,omitempty"`
 	DebitAccount     *InternalAccount `json:"debit_account,omitempty"`
 	IsDefaultAccount bool             `json:"is_default_account,omitempty"`
 }

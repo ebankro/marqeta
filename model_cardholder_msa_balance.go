@@ -22,7 +22,7 @@ type CardholderMsaBalance struct {
 	PendingCredits   float32                      `json:"pending_credits"`
 	ImpactedAmount   float32                      `json:"impacted_amount,omitempty"`
 	Balances         map[string]CardholderBalance `json:"balances"`
-	LastUpdatedTime  time.Time                    `json:"last_updated_time"`
+	LastUpdatedTime  *time.Time                   `json:"last_updated_time"`
 	Name             string                       `json:"name"`
 	CampaignToken    string                       `json:"campaign_token,omitempty"`
 }

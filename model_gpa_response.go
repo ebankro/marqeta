@@ -20,9 +20,9 @@ type GpaResponse struct {
 	Memo   string      `json:"memo,omitempty"`
 	Fees   []FeeDetail `json:"fees,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime          time.Time      `json:"last_modified_time"`
+	LastModifiedTime          *time.Time     `json:"last_modified_time"`
 	TransactionToken          string         `json:"transaction_token"`
 	State                     string         `json:"state"`
 	Response                  *Response      `json:"response"`

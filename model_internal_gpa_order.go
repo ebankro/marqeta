@@ -25,6 +25,6 @@ type InternalGpaOrder struct {
 	OrderState       string                 `json:"orderState,omitempty"`
 	ResponseCode     string                 `json:"responseCode,omitempty"`
 	ResponseMemo     string                 `json:"responseMemo,omitempty"`
-	CreatedTime      time.Time              `json:"created_time,omitempty"`
-	LastModifiedTime time.Time              `json:"last_modified_time,omitempty"`
+	CreatedTime      *time.Time             `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time             `json:"last_modified_time,omitempty"`
 }

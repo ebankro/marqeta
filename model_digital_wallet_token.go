@@ -20,8 +20,8 @@ type DigitalWalletToken struct {
 	StateReason               string                      `json:"state_reason,omitempty"`
 	FulfillmentStatus         string                      `json:"fulfillment_status,omitempty"`
 	IssuerEligibilityDecision string                      `json:"issuer_eligibility_decision,omitempty"`
-	CreatedTime               time.Time                   `json:"created_time,omitempty"`
-	LastModifiedTime          time.Time                   `json:"last_modified_time,omitempty"`
+	CreatedTime               *time.Time                  `json:"created_time,omitempty"`
+	LastModifiedTime          *time.Time                  `json:"last_modified_time,omitempty"`
 	TokenServiceProvider      *TokenServiceProvider       `json:"token_service_provider,omitempty"`
 	Device                    *Device                     `json:"device,omitempty"`
 	WalletProviderProfile     *WalletProviderProfile      `json:"wallet_provider_profile,omitempty"`

@@ -15,14 +15,14 @@ import (
 
 type GatewayProgramFundingSourceResponse struct {
 	// 250 char max. Empty string (disabled). Must be HTTPS.
-	Url              string    `json:"url"`
-	Version          string    `json:"version"`
-	Name             string    `json:"name"`
-	Active           bool      `json:"active,omitempty"`
-	Token            string    `json:"token"`
-	CreatedTime      time.Time `json:"created_time"`
-	LastModifiedTime time.Time `json:"last_modified_time"`
-	Account          string    `json:"account"`
+	Url              string     `json:"url"`
+	Version          string     `json:"version"`
+	Name             string     `json:"name"`
+	Active           bool       `json:"active,omitempty"`
+	Token            string     `json:"token"`
+	CreatedTime      *time.Time `json:"created_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
+	Account          string     `json:"account"`
 	// 50 char max. Required if URL is present
 	BasicAuthUsername string `json:"basic_auth_username"`
 	// 50 char max. Required if URL is present. Minimum 20 chars with upper and lowercase letters, numbers, and symbols

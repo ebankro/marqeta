@@ -23,9 +23,9 @@ type TransactionModel struct {
 	Type_                                     string                        `json:"type,omitempty"`
 	State                                     string                        `json:"state"`
 	Duration                                  int32                         `json:"duration,omitempty"`
-	CreatedTime                               time.Time                     `json:"created_time,omitempty"`
-	UserTransactionTime                       time.Time                     `json:"user_transaction_time,omitempty"`
-	SettlementDate                            time.Time                     `json:"settlement_date,omitempty"`
+	CreatedTime                               *time.Time                    `json:"created_time,omitempty"`
+	UserTransactionTime                       *time.Time                    `json:"user_transaction_time,omitempty"`
+	SettlementDate                            *time.Time                    `json:"settlement_date,omitempty"`
 	RequestAmount                             float32                       `json:"request_amount,omitempty"`
 	Amount                                    float32                       `json:"amount"`
 	CashBackAmount                            float32                       `json:"cash_back_amount,omitempty"`

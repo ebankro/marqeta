@@ -14,10 +14,10 @@ import (
 )
 
 type ProgramTransferTypeReponse struct {
-	Token                     string    `json:"token"`
-	ProgramFundingSourceToken string    `json:"program_funding_source_token"`
-	Tags                      string    `json:"tags,omitempty"`
-	Memo                      string    `json:"memo,omitempty"`
-	CreatedTime               time.Time `json:"created_time,omitempty"`
-	LastModifiedTime          time.Time `json:"last_modified_time,omitempty"`
+	Token                     string     `json:"token"`
+	ProgramFundingSourceToken string     `json:"program_funding_source_token"`
+	Tags                      string     `json:"tags,omitempty"`
+	Memo                      string     `json:"memo,omitempty"`
+	CreatedTime               *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime          *time.Time `json:"last_modified_time,omitempty"`
 }

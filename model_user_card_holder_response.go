@@ -45,9 +45,9 @@ type UserCardHolderResponse struct {
 	IpAddress           string `json:"ip_address,omitempty"`
 	Password            string `json:"password,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime        time.Time                     `json:"last_modified_time"`
+	LastModifiedTime        *time.Time                    `json:"last_modified_time"`
 	BusinessToken           string                        `json:"business_token,omitempty"`
 	Metadata                map[string]string             `json:"metadata,omitempty"`
 	AccountHolderGroupToken string                        `json:"account_holder_group_token,omitempty"`

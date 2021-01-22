@@ -14,14 +14,14 @@ import (
 )
 
 type DirectDepositTransitionResponse struct {
-	Channel                   string    `json:"channel,omitempty"`
-	Token                     string    `json:"token,omitempty"`
-	Reason                    string    `json:"reason,omitempty"`
-	Type_                     string    `json:"type,omitempty"`
-	DirectDepositToken        string    `json:"direct_deposit_token,omitempty"`
-	TransactionToken          string    `json:"transaction_token,omitempty"`
-	State                     string    `json:"state,omitempty"`
-	ReasonCode                string    `json:"reason_code,omitempty"`
-	CreatedTime               time.Time `json:"created_time,omitempty"`
-	DirectDepositAccountToken string    `json:"direct_deposit_account_token,omitempty"`
+	Channel                   string     `json:"channel,omitempty"`
+	Token                     string     `json:"token,omitempty"`
+	Reason                    string     `json:"reason,omitempty"`
+	Type_                     string     `json:"type,omitempty"`
+	DirectDepositToken        string     `json:"direct_deposit_token,omitempty"`
+	TransactionToken          string     `json:"transaction_token,omitempty"`
+	State                     string     `json:"state,omitempty"`
+	ReasonCode                string     `json:"reason_code,omitempty"`
+	CreatedTime               *time.Time `json:"created_time,omitempty"`
+	DirectDepositAccountToken string     `json:"direct_deposit_account_token,omitempty"`
 }

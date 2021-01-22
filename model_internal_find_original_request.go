@@ -19,6 +19,6 @@ type InternalFindOriginalRequest struct {
 	Context              map[string]interface{}            `json:"context,omitempty"`
 	Configuration        map[string]string                 `json:"configuration,omitempty"`
 	Finders              []string                          `json:"finders,omitempty"`
-	OriginalTimestamp    time.Time                         `json:"original_timestamp,omitempty"`
+	OriginalTimestamp    *time.Time                        `json:"original_timestamp,omitempty"`
 	OriginalStan         string                            `json:"original_stan,omitempty"`
 }

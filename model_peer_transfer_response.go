@@ -14,14 +14,14 @@ import (
 )
 
 type PeerTransferResponse struct {
-	Token                  string    `json:"token"`
-	Amount                 float32   `json:"amount"`
-	Tags                   string    `json:"tags,omitempty"`
-	Memo                   string    `json:"memo,omitempty"`
-	CurrencyCode           string    `json:"currency_code"`
-	SenderUserToken        string    `json:"sender_user_token,omitempty"`
-	RecipientUserToken     string    `json:"recipient_user_token,omitempty"`
-	SenderBusinessToken    string    `json:"sender_business_token,omitempty"`
-	RecipientBusinessToken string    `json:"recipient_business_token,omitempty"`
-	CreatedTime            time.Time `json:"created_time"`
+	Token                  string     `json:"token"`
+	Amount                 float32    `json:"amount"`
+	Tags                   string     `json:"tags,omitempty"`
+	Memo                   string     `json:"memo,omitempty"`
+	CurrencyCode           string     `json:"currency_code"`
+	SenderUserToken        string     `json:"sender_user_token,omitempty"`
+	RecipientUserToken     string     `json:"recipient_user_token,omitempty"`
+	SenderBusinessToken    string     `json:"sender_business_token,omitempty"`
+	RecipientBusinessToken string     `json:"recipient_business_token,omitempty"`
+	CreatedTime            *time.Time `json:"created_time"`
 }

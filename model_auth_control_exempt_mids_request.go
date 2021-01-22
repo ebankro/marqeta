@@ -18,6 +18,6 @@ type AuthControlExemptMidsRequest struct {
 	Name        string                   `json:"name"`
 	Association *SpendControlAssociation `json:"association,omitempty"`
 	Mid         string                   `json:"mid"`
-	StartTime   time.Time                `json:"start_time,omitempty"`
-	EndTime     time.Time                `json:"end_time,omitempty"`
+	StartTime   *time.Time               `json:"start_time,omitempty"`
+	EndTime     *time.Time               `json:"end_time,omitempty"`
 }

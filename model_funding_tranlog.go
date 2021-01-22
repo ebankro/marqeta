@@ -36,11 +36,11 @@ type FundingTranlog struct {
 	ResponseCode              string                            `json:"responseCode,omitempty"`
 	ApprovalNumber            string                            `json:"approvalNumber,omitempty"`
 	DisplayMessage            string                            `json:"displayMessage,omitempty"`
-	Date                      time.Time                         `json:"date,omitempty"`
-	TransmissionDate          time.Time                         `json:"transmissionDate,omitempty"`
-	LocalTransactionDate      time.Time                         `json:"localTransactionDate,omitempty"`
-	CaptureDate               time.Time                         `json:"captureDate,omitempty"`
-	SettlementDate            time.Time                         `json:"settlementDate,omitempty"`
+	Date                      *time.Time                        `json:"date,omitempty"`
+	TransmissionDate          *time.Time                        `json:"transmissionDate,omitempty"`
+	LocalTransactionDate      *time.Time                        `json:"localTransactionDate,omitempty"`
+	CaptureDate               *time.Time                        `json:"captureDate,omitempty"`
+	SettlementDate            *time.Time                        `json:"settlementDate,omitempty"`
 	Itc                       string                            `json:"itc,omitempty"`
 	Irc                       string                            `json:"irc,omitempty"`
 	CurrencyCode              string                            `json:"currencyCode,omitempty"`
@@ -66,7 +66,7 @@ type FundingTranlog struct {
 	TransactionState          string                            `json:"transactionState,omitempty"`
 	RemoteHost                string                            `json:"remoteHost,omitempty"`
 	ResponseAmount            float32                           `json:"responseAmount,omitempty"`
-	ExpirationTime            time.Time                         `json:"expirationTime,omitempty"`
+	ExpirationTime            *time.Time                        `json:"expirationTime,omitempty"`
 	IncomingNetworkRequestITC string                            `json:"incomingNetworkRequestITC,omitempty"`
 	DigitalWalletToken        *InternalDigitalWallet            `json:"digital_wallet_token,omitempty"`
 	TranlogAttributes         map[string]string                 `json:"tranlogAttributes,omitempty"`
