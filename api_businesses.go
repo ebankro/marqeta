@@ -613,8 +613,6 @@ func (a *BusinessesApiService) PostBusinesses(ctx context.Context, localVarOptio
 		localVarReturnValue BusinessCardHolderResponse
 	)
 
-	fmt.Println("post businesses")
-
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/businesses"
 
@@ -646,16 +644,12 @@ func (a *BusinessesApiService) PostBusinesses(ctx context.Context, localVarOptio
 		if !localVarOptionalBodyok {
 			return localVarReturnValue, nil, reportError("body should be BusinessCardholder")
 		}
-		fmt.Println(localVarOptionalBody)
 		localVarPostBody = &localVarOptionalBody
 	}
-	fmt.Println(localVarPostBody)
 	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err
 	}
-
-	fmt.Println(r)
 
 	localVarHttpResponse, err := a.client.callAPI(r)
 	if err != nil || localVarHttpResponse == nil {
