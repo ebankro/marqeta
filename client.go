@@ -432,6 +432,8 @@ func (c *APIClient) prepareRequest(
 		localVarRequest.Header.Add(header, value)
 	}
 
+	fmt.Println(localVarRequest)
+
 	return localVarRequest, nil
 }
 
