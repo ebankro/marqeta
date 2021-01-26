@@ -14,10 +14,10 @@ import (
 )
 
 type ProgramFundingSourceResponse struct {
-	Name             string    `json:"name"`
-	Active           bool      `json:"active,omitempty"`
-	Token            string    `json:"token"`
-	CreatedTime      time.Time `json:"created_time"`
-	LastModifiedTime time.Time `json:"last_modified_time"`
-	Account          string    `json:"account"`
+	Name             string     `json:"name"`
+	Active           bool       `json:"active,omitempty"`
+	Token            string     `json:"token"`
+	CreatedTime      *time.Time `json:"created_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
+	Account          string     `json:"account"`
 }

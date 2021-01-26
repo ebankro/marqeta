@@ -23,5 +23,5 @@ type DigitalWalletTokenTransitionResponse struct {
 	FulfillmentStatus  string                  `json:"fulfillment_status"`
 	Reason             string                  `json:"reason,omitempty"`
 	ReasonCode         string                  `json:"reason_code,omitempty"`
-	CreatedTime        time.Time               `json:"created_time,omitempty"`
+	CreatedTime        *time.Time              `json:"created_time,omitempty"`
 }

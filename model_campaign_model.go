@@ -14,11 +14,11 @@ import (
 )
 
 type CampaignModel struct {
-	Active    bool      `json:"active"`
-	Name      string    `json:"name"`
-	StartDate time.Time `json:"start_date,omitempty"`
-	EndDate   time.Time `json:"end_date,omitempty"`
-	Token     string    `json:"token"`
+	Active    bool       `json:"active"`
+	Name      string     `json:"name"`
+	StartDate *time.Time `json:"start_date,omitempty"`
+	EndDate   *time.Time `json:"end_date,omitempty"`
+	Token     string     `json:"token"`
 	// Enclose tokens in brackets
 	StoreTokens []string `json:"store_tokens,omitempty"`
 }

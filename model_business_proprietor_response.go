@@ -21,7 +21,7 @@ type BusinessProprietorResponse struct {
 	Title            string                        `json:"title,omitempty"`
 	Home             *AddressResponseModel         `json:"home,omitempty"`
 	Ssn              string                        `json:"ssn,omitempty"`
-	Dob              time.Time                     `json:"dob,omitempty"`
+	Dob              *time.Time                    `json:"dob,omitempty"`
 	Phone            string                        `json:"phone,omitempty"`
 	Email            string                        `json:"email,omitempty"`
 	Identifications  []IdentificationResponseModel `json:"identifications,omitempty"`

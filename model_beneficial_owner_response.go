@@ -19,6 +19,6 @@ type BeneficialOwnerResponse struct {
 	LastName   string                `json:"last_name,omitempty"`
 	Title      string                `json:"title,omitempty"`
 	Home       *AddressResponseModel `json:"home,omitempty"`
-	Getdob     time.Time             `json:"getdob,omitempty"`
+	Getdob     *time.Time            `json:"getdob,omitempty"`
 	Phone      string                `json:"phone,omitempty"`
 }

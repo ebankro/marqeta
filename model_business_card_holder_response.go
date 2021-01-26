@@ -26,16 +26,16 @@ type BusinessCardHolderResponse struct {
 	AccountHolderGroupToken string            `json:"account_holder_group_token,omitempty"`
 	Authentication          *Authentication   `json:"authentication,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime             time.Time                      `json:"last_modified_time"`
+	LastModifiedTime             *time.Time                     `json:"last_modified_time"`
 	Status                       string                         `json:"status,omitempty"`
 	BusinessNameLegal            string                         `json:"business_name_legal,omitempty"`
 	BusinessNameDba              string                         `json:"business_name_dba,omitempty"`
 	OfficeLocation               *AddressResponseModel          `json:"office_location,omitempty"`
-	InCurrentLocationSince       time.Time                      `json:"in_current_location_since,omitempty"`
+	InCurrentLocationSince       *time.Time                     `json:"in_current_location_since,omitempty"`
 	Website                      string                         `json:"website,omitempty"`
-	DateEstablished              time.Time                      `json:"date_established,omitempty"`
+	DateEstablished              *time.Time                     `json:"date_established,omitempty"`
 	GeneralBusinessDescription   string                         `json:"general_business_description,omitempty"`
 	History                      string                         `json:"history,omitempty"`
 	BusinessType                 string                         `json:"business_type,omitempty"`
@@ -49,7 +49,7 @@ type BusinessCardHolderResponse struct {
 	AttesterName                 string                         `json:"attester_name,omitempty"`
 	AttestationConsent           bool                           `json:"attestation_consent,omitempty"`
 	AttesterTitle                string                         `json:"attester_title,omitempty"`
-	AttestationDate              time.Time                      `json:"attestation_date,omitempty"`
+	AttestationDate              *time.Time                     `json:"attestation_date,omitempty"`
 	ProprietorIsBeneficialOwner  bool                           `json:"proprietor_is_beneficial_owner,omitempty"`
 	BeneficialOwner1             *BeneficialOwnerResponse       `json:"beneficial_owner1,omitempty"`
 	BeneficialOwner2             *BeneficialOwnerResponse       `json:"beneficial_owner2,omitempty"`

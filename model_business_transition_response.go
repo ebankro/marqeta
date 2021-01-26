@@ -14,12 +14,12 @@ import (
 )
 
 type BusinessTransitionResponse struct {
-	Token            string    `json:"token"`
-	Status           string    `json:"status"`
-	ReasonCode       string    `json:"reason_code"`
-	Reason           string    `json:"reason,omitempty"`
-	Channel          string    `json:"channel"`
-	CreatedTime      time.Time `json:"created_time,omitempty"`
-	LastModifiedTime time.Time `json:"last_modified_time,omitempty"`
-	BusinessToken    string    `json:"business_token,omitempty"`
+	Token            string     `json:"token"`
+	Status           string     `json:"status"`
+	ReasonCode       string     `json:"reason_code"`
+	Reason           string     `json:"reason,omitempty"`
+	Channel          string     `json:"channel"`
+	CreatedTime      *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time,omitempty"`
+	BusinessToken    string     `json:"business_token,omitempty"`
 }

@@ -15,10 +15,10 @@ import (
 
 type RealTimeFeeGroup struct {
 	// 36 char max
-	Token            string    `json:"token"`
-	CreatedTime      time.Time `json:"created_time,omitempty"`
-	LastModifiedTime time.Time `json:"last_modified_time,omitempty"`
-	Active           bool      `json:"active"`
+	Token            string     `json:"token"`
+	CreatedTime      *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time,omitempty"`
+	Active           bool       `json:"active"`
 	// 50 char max
 	Name      string   `json:"name"`
 	FeeTokens []string `json:"fee_tokens,omitempty"`

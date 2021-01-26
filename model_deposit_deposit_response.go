@@ -14,23 +14,23 @@ import (
 )
 
 type DepositDepositResponse struct {
-	Token                          string    `json:"token,omitempty"`
-	Amount                         float32   `json:"amount,omitempty"`
-	Type_                          string    `json:"type,omitempty"`
-	State                          string    `json:"state,omitempty"`
-	SettlementDate                 time.Time `json:"settlement_date,omitempty"`
-	StateReason                    string    `json:"state_reason,omitempty"`
-	StateReasonCode                string    `json:"state_reason_code,omitempty"`
-	DirectDepositAccountToken      string    `json:"direct_deposit_account_token,omitempty"`
-	UserToken                      string    `json:"user_token,omitempty"`
-	BusinessToken                  string    `json:"business_token,omitempty"`
-	CreatedTime                    time.Time `json:"created_time,omitempty"`
-	LastModifiedTime               time.Time `json:"last_modified_time,omitempty"`
-	StandardEntryClassCode         string    `json:"standard_entry_class_code,omitempty"`
-	CompanyName                    string    `json:"company_name,omitempty"`
-	CompanyDiscretionaryData       string    `json:"company_discretionary_data,omitempty"`
-	CompanyIdentification          string    `json:"company_identification,omitempty"`
-	CompanyEntryDescription        string    `json:"company_entry_description,omitempty"`
-	IndividualIdentificationNumber string    `json:"individual_identification_number,omitempty"`
-	IndividualName                 string    `json:"individual_name,omitempty"`
+	Token                          string     `json:"token,omitempty"`
+	Amount                         float32    `json:"amount,omitempty"`
+	Type_                          string     `json:"type,omitempty"`
+	State                          string     `json:"state,omitempty"`
+	SettlementDate                 *time.Time `json:"settlement_date,omitempty"`
+	StateReason                    string     `json:"state_reason,omitempty"`
+	StateReasonCode                string     `json:"state_reason_code,omitempty"`
+	DirectDepositAccountToken      string     `json:"direct_deposit_account_token,omitempty"`
+	UserToken                      string     `json:"user_token,omitempty"`
+	BusinessToken                  string     `json:"business_token,omitempty"`
+	CreatedTime                    *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime               *time.Time `json:"last_modified_time,omitempty"`
+	StandardEntryClassCode         string     `json:"standard_entry_class_code,omitempty"`
+	CompanyName                    string     `json:"company_name,omitempty"`
+	CompanyDiscretionaryData       string     `json:"company_discretionary_data,omitempty"`
+	CompanyIdentification          string     `json:"company_identification,omitempty"`
+	CompanyEntryDescription        string     `json:"company_entry_description,omitempty"`
+	IndividualIdentificationNumber string     `json:"individual_identification_number,omitempty"`
+	IndividualName                 string     `json:"individual_name,omitempty"`
 }

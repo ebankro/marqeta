@@ -15,12 +15,12 @@ import (
 
 type FileProcessingResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime  time.Time `json:"last_modified_time"`
-	Token             string    `json:"token"`
-	FileProcessType   string    `json:"file_process_type"`
-	SourceFile        string    `json:"source_file"`
-	ArchiveFile       string    `json:"archive_file,omitempty"`
-	FileProcessStatus string    `json:"file_process_status"`
+	LastModifiedTime  *time.Time `json:"last_modified_time"`
+	Token             string     `json:"token"`
+	FileProcessType   string     `json:"file_process_type"`
+	SourceFile        string     `json:"source_file"`
+	ArchiveFile       string     `json:"archive_file,omitempty"`
+	FileProcessStatus string     `json:"file_process_status"`
 }

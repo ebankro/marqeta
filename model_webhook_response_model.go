@@ -19,7 +19,7 @@ type WebhookResponseModel struct {
 	Active bool                `json:"active,omitempty"`
 	Config *WebhookConfigModel `json:"config"`
 	// An array of event types
-	Events           []string  `json:"events"`
-	CreatedTime      time.Time `json:"created_time,omitempty"`
-	LastModifiedTime time.Time `json:"last_modified_time,omitempty"`
+	Events           []string   `json:"events"`
+	CreatedTime      *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time,omitempty"`
 }

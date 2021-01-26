@@ -22,7 +22,7 @@ type FraudStreamRequest struct {
 	UserToken                      string                              `json:"user_token,omitempty"`
 	ActingUserToken                string                              `json:"acting_user_token,omitempty"`
 	CardToken                      string                              `json:"card_token,omitempty"`
-	UserTransactionTime            time.Time                           `json:"user_transaction_time,omitempty"`
+	UserTransactionTime            *time.Time                          `json:"user_transaction_time,omitempty"`
 	RequestAmount                  float32                             `json:"request_amount,omitempty"`
 	Amount                         float32                             `json:"amount,omitempty"`
 	CurrencyCode                   string                              `json:"currency_code,omitempty"`

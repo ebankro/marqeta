@@ -14,11 +14,11 @@ import (
 )
 
 type CardholderNoteResponseModel struct {
-	Token             string    `json:"token,omitempty"`
-	Description       string    `json:"description"`
-	CreatedBy         string    `json:"created_by"`
-	CreatedByUserRole string    `json:"created_by_user_role,omitempty"`
-	Private           bool      `json:"private,omitempty"`
-	CreatedTime       time.Time `json:"created_time,omitempty"`
-	LastModifiedTime  time.Time `json:"last_modified_time,omitempty"`
+	Token             string     `json:"token,omitempty"`
+	Description       string     `json:"description"`
+	CreatedBy         string     `json:"created_by"`
+	CreatedByUserRole string     `json:"created_by_user_role,omitempty"`
+	Private           bool       `json:"private,omitempty"`
+	CreatedTime       *time.Time `json:"created_time,omitempty"`
+	LastModifiedTime  *time.Time `json:"last_modified_time,omitempty"`
 }

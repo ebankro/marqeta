@@ -14,8 +14,8 @@ import (
 )
 
 type UserStipBalanceRequest struct {
-	UserToken       string    `json:"user_token"`
-	IsoCurrencyCode string    `json:"iso_currency_code"`
-	EffectiveTime   time.Time `json:"effective_time,omitempty"`
-	CachedBalance   float32   `json:"cached_balance"`
+	UserToken       string     `json:"user_token"`
+	IsoCurrencyCode string     `json:"iso_currency_code"`
+	EffectiveTime   *time.Time `json:"effective_time,omitempty"`
+	CachedBalance   float32    `json:"cached_balance"`
 }

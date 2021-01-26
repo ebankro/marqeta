@@ -28,6 +28,6 @@ type BankTransferResponseModel struct {
 	Status                 string                                `json:"status,omitempty"`
 	Transitions            []BankTransferTransitionResponseModel `json:"transitions,omitempty"`
 	BatchNumber            string                                `json:"batch_number,omitempty"`
-	CreatedTime            time.Time                             `json:"created_time,omitempty"`
-	LastModifiedTime       time.Time                             `json:"last_modified_time,omitempty"`
+	CreatedTime            *time.Time                            `json:"created_time,omitempty"`
+	LastModifiedTime       *time.Time                            `json:"last_modified_time,omitempty"`
 }

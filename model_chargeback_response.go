@@ -26,7 +26,7 @@ type ChargebackResponse struct {
 	NetworkCaseId     string  `json:"network_case_id,omitempty"`
 	CreditUser        bool    `json:"credit_user"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
 }

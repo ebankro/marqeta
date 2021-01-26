@@ -15,8 +15,8 @@ import (
 
 type CardInventoryResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime       time.Time `json:"created_time"`
-	Token             string    `json:"token,omitempty"`
-	PackageId         string    `json:"package_id"`
-	StartingInventory int32     `json:"starting_inventory"`
+	CreatedTime       *time.Time `json:"created_time"`
+	Token             string     `json:"token,omitempty"`
+	PackageId         string     `json:"package_id"`
+	StartingInventory int32      `json:"starting_inventory"`
 }

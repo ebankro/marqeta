@@ -15,15 +15,15 @@ import (
 
 type ProgramReserveTransactionResponse struct {
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime time.Time `json:"last_modified_time"`
-	Token            string    `json:"token,omitempty"`
-	Amount           float32   `json:"amount,omitempty"`
-	CurrencyCode     string    `json:"currency_code,omitempty"`
-	Memo             string    `json:"memo,omitempty"`
-	Tags             string    `json:"tags,omitempty"`
-	TransactionToken string    `json:"transaction_token,omitempty"`
-	Type_            string    `json:"type,omitempty"`
-	State            string    `json:"state,omitempty"`
+	LastModifiedTime *time.Time `json:"last_modified_time"`
+	Token            string     `json:"token,omitempty"`
+	Amount           float32    `json:"amount,omitempty"`
+	CurrencyCode     string     `json:"currency_code,omitempty"`
+	Memo             string     `json:"memo,omitempty"`
+	Tags             string     `json:"tags,omitempty"`
+	TransactionToken string     `json:"transaction_token,omitempty"`
+	Type_            string     `json:"type,omitempty"`
+	State            string     `json:"state,omitempty"`
 }

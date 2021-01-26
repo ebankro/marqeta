@@ -24,6 +24,6 @@ type ProgramTransferResponse struct {
 	Amount           float32        `json:"amount"`
 	Memo             string         `json:"memo,omitempty"`
 	Tags             string         `json:"tags,omitempty"`
-	CreatedTime      time.Time      `json:"created_time,omitempty"`
+	CreatedTime      *time.Time     `json:"created_time,omitempty"`
 	JitFunding       *JitFundingApi `json:"jit_funding,omitempty"`
 }

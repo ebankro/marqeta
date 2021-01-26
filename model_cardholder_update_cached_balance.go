@@ -14,6 +14,6 @@ import (
 )
 
 type CardholderUpdateCachedBalance struct {
-	CachedBalance   float32   `json:"cached_balance,omitempty"`
-	LastUpdatedTime time.Time `json:"last_updated_time"`
+	CachedBalance   float32    `json:"cached_balance,omitempty"`
+	LastUpdatedTime *time.Time `json:"last_updated_time"`
 }

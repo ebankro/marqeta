@@ -23,9 +23,9 @@ type Fee struct {
 	// 255 char max
 	Tags string `json:"tags,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime   time.Time              `json:"last_modified_time"`
+	LastModifiedTime   *time.Time             `json:"last_modified_time"`
 	CurrencyCode       string                 `json:"currency_code"`
 	RealTimeAssessment *RealTimeFeeAssessment `json:"real_time_assessment,omitempty"`
 }

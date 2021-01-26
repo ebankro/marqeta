@@ -23,7 +23,7 @@ type InternalCard struct {
 	User           *InternalUser        `json:"user"`
 	CardProduct    *InternalCardProduct `json:"card_product"`
 	LastFour       string               `json:"last_four"`
-	ExpirationTime time.Time            `json:"expiration_time,omitempty"`
+	ExpirationTime *time.Time           `json:"expiration_time,omitempty"`
 	State          string               `json:"state,omitempty"`
 	Metadata       map[string]string    `json:"metadata,omitempty"`
 	CardPinBlock   string               `json:"card_pin_block,omitempty"`

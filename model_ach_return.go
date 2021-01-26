@@ -14,11 +14,11 @@ import (
 )
 
 type AchReturn struct {
-	Amount        float32   `json:"amount,omitempty"`
-	Date          time.Time `json:"date,omitempty"`
-	DateInitiated time.Time `json:"dateInitiated,omitempty"`
-	OrderId       string    `json:"orderId,omitempty"`
-	ReasonCode    string    `json:"reasonCode,omitempty"`
-	DirectDeposit bool      `json:"directDeposit,omitempty"`
-	AchType       string    `json:"achType,omitempty"`
+	Amount        float32    `json:"amount,omitempty"`
+	Date          *time.Time `json:"date,omitempty"`
+	DateInitiated *time.Time `json:"dateInitiated,omitempty"`
+	OrderId       string     `json:"orderId,omitempty"`
+	ReasonCode    string     `json:"reasonCode,omitempty"`
+	DirectDeposit bool       `json:"directDeposit,omitempty"`
+	AchType       string     `json:"achType,omitempty"`
 }

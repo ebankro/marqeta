@@ -20,22 +20,22 @@ type MsaOrderResponse struct {
 	OrderBalances  *MsaBalances `json:"order_balances"`
 	PurchaseAmount float32      `json:"purchase_amount"`
 	// yyyy-MM-ddThh:mm:ssZ
-	LastTransactionDate time.Time `json:"last_transaction_date"`
+	LastTransactionDate *time.Time `json:"last_transaction_date"`
 	// yyyy-MM-ddThh:mm:ssZ
-	StartDate time.Time `json:"start_date,omitempty"`
+	StartDate *time.Time `json:"start_date,omitempty"`
 	// yyyy-MM-ddThh:mm:ssZ
-	EndDate             time.Time `json:"end_date,omitempty"`
-	CurrencyCode        string    `json:"currency_code"`
-	Active              bool      `json:"active"`
-	RewardAmount        float32   `json:"reward_amount"`
-	RewardTriggerAmount float32   `json:"reward_trigger_amount"`
-	UnloadedAmount      float32   `json:"unloaded_amount,omitempty"`
-	CampaignToken       string    `json:"campaign_token"`
-	Funding             *Funding  `json:"funding"`
+	EndDate             *time.Time `json:"end_date,omitempty"`
+	CurrencyCode        string     `json:"currency_code"`
+	Active              bool       `json:"active"`
+	RewardAmount        float32    `json:"reward_amount"`
+	RewardTriggerAmount float32    `json:"reward_trigger_amount"`
+	UnloadedAmount      float32    `json:"unloaded_amount,omitempty"`
+	CampaignToken       string     `json:"campaign_token"`
+	Funding             *Funding   `json:"funding"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	LastModifiedTime   time.Time              `json:"last_modified_time"`
+	LastModifiedTime   *time.Time             `json:"last_modified_time"`
 	AggregatedBalances *MsaAggregatedBalances `json:"aggregated_balances"`
 	TransactionToken   string                 `json:"transaction_token"`
 }

@@ -22,5 +22,5 @@ type DirectDepositAccountTransitionResponse struct {
 	Channel       string `json:"channel"`
 	Reason        string `json:"reason"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	CreatedTime time.Time `json:"created_time"`
+	CreatedTime *time.Time `json:"created_time"`
 }

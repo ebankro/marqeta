@@ -14,9 +14,9 @@ import (
 )
 
 type ReportRequest struct {
-	Partner   string    `json:"partner,omitempty"`
-	Report    string    `json:"report,omitempty"`
-	StartDate time.Time `json:"startDate,omitempty"`
-	EndDate   time.Time `json:"endDate,omitempty"`
-	SendFiles bool      `json:"sendFiles,omitempty"`
+	Partner   string     `json:"partner,omitempty"`
+	Report    string     `json:"report,omitempty"`
+	StartDate *time.Time `json:"startDate,omitempty"`
+	EndDate   *time.Time `json:"endDate,omitempty"`
+	SendFiles bool       `json:"sendFiles,omitempty"`
 }

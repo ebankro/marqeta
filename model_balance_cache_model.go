@@ -19,6 +19,6 @@ type BalanceCacheModel struct {
 	Balance          float32       `json:"balance"`
 	Layers           []int32       `json:"layers"`
 	UserToken        string        `json:"user_token"`
-	CreatedTime      time.Time     `json:"created_time,omitempty"`
-	LastModifiedTime time.Time     `json:"last_modified_time,omitempty"`
+	CreatedTime      *time.Time    `json:"created_time,omitempty"`
+	LastModifiedTime *time.Time    `json:"last_modified_time,omitempty"`
 }

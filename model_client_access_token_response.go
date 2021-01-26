@@ -16,9 +16,9 @@ import (
 type ClientAccessTokenResponse struct {
 	Application *Application `json:"application,omitempty"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	Created time.Time `json:"created"`
+	Created *time.Time `json:"created"`
 	// yyyy-MM-ddTHH:mm:ssZ
-	Expires   time.Time `json:"expires"`
-	Token     string    `json:"token,omitempty"`
-	CardToken string    `json:"card_token,omitempty"`
+	Expires   *time.Time `json:"expires"`
+	Token     string     `json:"token,omitempty"`
+	CardToken string     `json:"card_token,omitempty"`
 }

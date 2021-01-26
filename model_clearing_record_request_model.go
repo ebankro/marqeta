@@ -39,18 +39,18 @@ type ClearingRecordRequestModel struct {
 	ReasonCode                      string            `json:"reason_code,omitempty"`
 	ApprovalCode                    string            `json:"approval_code,omitempty"`
 	// yyyy-MM-dd, yyyy-MM-ddThh:mm:ssZ
-	TransactionDate time.Time `json:"transaction_date,omitempty"`
+	TransactionDate *time.Time `json:"transaction_date,omitempty"`
 	// yyyy-MM-dd, yyyy-MM-ddThh:mm:ssZ
-	LocalTransactionDate time.Time `json:"local_transaction_date,omitempty"`
+	LocalTransactionDate *time.Time `json:"local_transaction_date,omitempty"`
 	// yyyy-MM-dd, yyyy-MM-ddThh:mm:ssZ
-	SettlementDate         time.Time `json:"settlement_date,omitempty"`
-	NetworkReferenceId     string    `json:"network_reference_id,omitempty"`
-	FindOriginalWindowDays int32     `json:"find_original_window_days,omitempty"`
-	BatchNumber            string    `json:"batch_number,omitempty"`
-	BatchFileName          string    `json:"batch_file_name,omitempty"`
-	SequenceNumber         string    `json:"sequence_number,omitempty"`
-	MultiClearingCount     string    `json:"multi_clearing_count,omitempty"`
-	Network                string    `json:"network,omitempty"`
+	SettlementDate         *time.Time `json:"settlement_date,omitempty"`
+	NetworkReferenceId     string     `json:"network_reference_id,omitempty"`
+	FindOriginalWindowDays int32      `json:"find_original_window_days,omitempty"`
+	BatchNumber            string     `json:"batch_number,omitempty"`
+	BatchFileName          string     `json:"batch_file_name,omitempty"`
+	SequenceNumber         string     `json:"sequence_number,omitempty"`
+	MultiClearingCount     string     `json:"multi_clearing_count,omitempty"`
+	Network                string     `json:"network,omitempty"`
 	// Defaults to VISANET if network is VISA
 	SubNetwork                         string                `json:"sub_network,omitempty"`
 	CardAcceptor                       *CardAcceptorModel    `json:"card_acceptor,omitempty"`
